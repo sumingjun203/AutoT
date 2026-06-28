@@ -1,0 +1,17 @@
+# 登录测试数据
+login_cases:
+  - username: "standard_user"
+    password: "secret_sauce"
+    expect_success: true
+  - username: "locked_out_user"
+    password: "secret_sauce"
+    expect_success: false
+  - username: "problem_user"
+    password: "secret_sauce"
+    expect_success: true
+  - username: "performance_glitch_user"
+    password: "secret_sauce"
+    expect_success: true
+  - username: "invalid_user"
+    password: "wrong_pass"
+    expect_success: false

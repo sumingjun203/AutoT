@@ -1,0 +1,57 @@
+# Python 字节码 / 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 虚拟环境
+.venv/
+venv/
+env/
+ENV/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# 测试缓存 / 报告
+.pytest_cache/
+.coverage
+htmlcov/
+.allure/
+allure-results/
+allure-report/
+*.html
+!docs/**/*.html
+
+# 日志
+*.log
+logs/
+
+# 浏览器驱动
+chromedriver*
+geckodriver*
+msedgedriver*
+.driver/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 环境配置
+.env
+.env.local
+*.local
+
+# 敏感信息
+*.pem
+*.key
+secrets.yaml
+config.local.yaml

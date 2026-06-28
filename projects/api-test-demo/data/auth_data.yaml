@@ -1,0 +1,15 @@
+# 鉴权测试数据
+login_success_cases:
+  - email: "eve.holt@reqres.in"
+    password: "cityslicka"
+
+login_failure_cases:
+  - email: "eve.holt@reqres.in"
+    password: ""
+    expected_error: "Missing password"
+  - email: ""
+    password: "cityslicka"
+    expected_error: "Missing email or username"
+  - email: "wrong@example.com"
+    password: "wrongpass"
+    expected_error: "user not found"

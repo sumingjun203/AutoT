@@ -1,0 +1,15 @@
+# API 测试基础配置
+
+base_url: "https://reqres.in/api"
+timeout: 10
+
+# 测试环境配置
+env:
+  dev: "https://reqres.in/api"
+  staging: "https://staging.example.com/api"
+  prod: "https://api.example.com"
+
+# 鉴权配置
+auth:
+  api_key: "reqres-free-v1"
+  token_url: "/login"

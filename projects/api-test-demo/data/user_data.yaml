@@ -1,0 +1,16 @@
+# 用户测试数据
+create_cases:
+  - name: "morpheus"
+    job: "leader"
+  - name: "neo"
+    job: "the one"
+  - name: "trinity"
+    job: "hacker"
+  - name: "陈测试"
+    job: "工程师"
+
+update_cases:
+  - name: "neo_updated"
+    job: "chosen one"
+  - name: "morpheus_updated"
+    job: "captain"
