@@ -9,7 +9,7 @@
 
 | Day | 主题 | 笔记 | 完成 |
 |-----|------|------|------|
-| Day 1 | 变量、数据类型、字符串 | [day01-variables-and-strings.md](./day01-variables-and-strings.md) | ☐ |
+| Day 1 | 变量、数据类型、字符串 | [day01-variables-and-strings.md](./day01-variables-and-strings.md) | ✅ |
 | Day 2 | 控制流（if/for/while） | [day02-control-flow.md](./day02-control-flow.md) | ☐ |
 | Day 3 | 函数（参数、lambda） | [day03-functions.md](./day03-functions.md) | ☐ |
 | Day 4 | 数据结构（list/dict/set） | [day04-data-structures.md](./day04-data-structures.md) | ☐ |
