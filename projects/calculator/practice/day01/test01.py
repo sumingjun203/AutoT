@@ -82,10 +82,10 @@ def is_chinese_phone(phone: str) -> bool:
 def mask_email(email: str) -> str:
   """把邮箱用户名部分第 2 位之后替换为 *，例如 alice@x.com → a***e@x.com"""
   new_strlist=email.split('@')
-  new_user=new_strlist[0][0]
-  for i in range(len(new_strlist[0])):
+  new_user=new_strlist[0]
+  for i in range(0,len(new_strlist[0])):
     if i >=1:
-      new_user=new_user+'*'
+      new_user=new_user.replace(new_user[i],'*')
   new_strlist[0]=new_user
   return ''.join(new_strlist)
   
@@ -120,10 +120,47 @@ def extract_digits(text: str) -> str:
 # 速算小窍门：直接看第 17 位，1/3/5/7/9 → 男，0/2/4/6/8 → 女
 def parse_id_card(id_card: str) -> dict:
   assert len(id_card) != 18,print(f'身份证不是18位')
+  if id_card.isdigit()==False and id_card[17]!='X':
+    print(f'不是身份证')
+    return {}
   dict_card={}
+  region_code=id_card[0:6]
+  birthday=id_card[6:10]+'-'+id_card[10:12]+'-'+id_card[12:14]
+  if int(id_card[16]%2!=0):
+    gender='男'
+  else:
+    gender='女'
+  dict_card['region_code']=region_code
+  dict_card['birthday']=birthday
+  dict_card['gender']=gender
   return dict_card
 
-
+#### 6. 测试报告生成器
+# 编写函数 `format_report(results: list[dict]) -> str`，输入形如：
+# ```python
+# results = [
+#     {"name": "登录成功", "status": "PASS", "duration": 0.123},result[1]
+#     {"name": "查询订单", "status": "PASS", "duration": 0.456},result[2]
+#     {"name": "删除订单", "status": "FAIL", "duration": 0.089},result[3]
+#     {"name": "退出登录", "status": "PASS", "duration": 0.012},result[4]
+# ]
+# ```
+# 输出对齐的报告（用 f-string 格式化，宽度自定义）：
+# ```
+# 用例名称        状态     耗时(s)
+# ----------  --------  --------
+# 登录成功       PASS     0.123
+# 查询订单       PASS     0.456
+# 删除订单       FAIL     0.089
+# 退出登录       PASS     0.012
+# ----------  --------  --------
+# 通过: 3  失败: 1  总计: 4
+# ```
+def format_report(results: list[dict]) -> str:
+  result=f''
+  
+  
+  return result
 
 
 
